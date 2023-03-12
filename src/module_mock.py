@@ -55,6 +55,14 @@ def create_new_drink(name: str, price: int) -> Drink:
     return drink
 
 def get_current_month() -> int:
+    """回傳當下的月份
+
+    Raises:
+        Exception: 當月份發生錯誤時，回傳 Exception
+
+    Returns:
+        int: 執行當下的月份
+    """
     today = datetime.now()
 
     month = today.month

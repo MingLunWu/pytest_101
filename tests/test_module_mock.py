@@ -11,18 +11,17 @@ def test_sleep_for_a_while():
     response = sleep_for_a_while(20)
     assert response==20
 
-@pytest.mark.skip
+@pytest.mark.sleep
 def test_sleep_for_a_while_mock_func():
     with patch("src.module_mock.time.sleep"):
         response = sleep_for_a_while(20)
         assert response==20
 
-@pytest.mark.skip
+@pytest.mark.sleep
 def test_sleep_for_a_while_replace_func():
     with patch("src.module_mock.time.sleep", new_callable=time.sleep(2)):
         response = sleep_for_a_while(20)
         assert response==20
-
 
 # mock 某個套件，再手動定義 now 的回傳值
 def test_get_current_season(mocker):
