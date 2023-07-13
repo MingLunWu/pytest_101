@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pytest-101"
+version = "0.1.0"
+description = ""
+authors = ["MingLunWu <allen6997535@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pytest_101"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^7.4.0"
+pytest-mock = "^3.11.1"
+pytest-cov = "^4.1.0"
+requests-mock = "^1.11.0"
+commitizen = "^3.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
